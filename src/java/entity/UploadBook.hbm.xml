@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 25, 2018 10:53:42 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.UploadBook" table="upload_book" catalog="projectjsf" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="bookname" type="string">
+            <column name="bookname" length="45" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="45" not-null="true" />
+        </property>
+        <property name="publishdate" type="string">
+            <column name="publishdate" length="45" not-null="true" />
+        </property>
+        <property name="publishername" type="string">
+            <column name="publishername" length="45" not-null="true" />
+        </property>
+        <property name="selectbook" type="string">
+            <column name="selectbook" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

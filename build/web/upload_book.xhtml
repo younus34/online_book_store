@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="templates/MyTemplate.xhtml">
+        <ui:define name="title">
+            this is online book store
+        </ui:define>
+        <div id="container">
+            <ui:define name="top">
+
+                <div id="blank"></div>
+                <div id="menu">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
+                                <a class="navbar-brand" href="#">Portfolio</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="index.xhtml">Home</a></li>
+                                    <li><a href="upload_book.xhtml">Upload books</a></li>
+                                    <li><a href="Book_view.xhtml">view and delete books</a></li>
+                                    <li><a href="index.xhtml">view Feedback and rating</a></li>
+                                    <li><a href="index.xhtml">logout</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+            </ui:define>
+ <center>
+            <ui:define name="content">
+                <br></br>
+                <br></br>
+                <br></br>
+
+
+               
+                <h:form enctype="multipart/form-data">
+                    <p:messages id="msg" closable="true" autoUpdate="true"></p:messages>
+                    <center>
+                    <p:panelGrid columns="2">
+                          <f:facet name="header">Upload Book</f:facet>
+
+
+                        <p:outputLabel value=" "></p:outputLabel>
+                        <p:outputLabel value=" "></p:outputLabel>
+
+                        <p:outputLabel value="Book Name"></p:outputLabel>
+                        <p:inputText value="#{uploadMB.uploadbook.bookname}"> </p:inputText>
+
+                        <p:outputLabel value="Book description"></p:outputLabel>
+                        <p:inputText value="#{uploadMB.uploadbook.description}"> </p:inputText>
+
+                        <p:outputLabel value="publishername "></p:outputLabel>
+                        <p:inputText value="#{uploadMB.uploadbook.publishername}"> </p:inputText>
+
+                        <p:outputLabel value="publishdate "></p:outputLabel>
+                        <p:inputText value="#{uploadMB.uploadbook.publishdate}"> </p:inputText>
+
+                        <p:outputLabel value="selectbook "></p:outputLabel>
+                        <p:fileUpload value="#{uploadMB.file}" mode="simple"> </p:fileUpload>
+
+                        <p:outputLabel value=" "></p:outputLabel>
+
+
+                        <p:commandButton action="#{uploadMB.addbook()}" value="Save" update="msg" ajax="false"></p:commandButton>    
+
+
+                    </p:panelGrid>
+                      
+                         <h:link style="color: yellow;" outcome="Book_view_book" value=" View AllBooks "></h:link>
+                    </center>
+                </h:form>
+               
+
+
+            </ui:define>
+     </center>
+
+        </div>
+
+    </ui:composition>
+
+
+
+
+
+</html>
+

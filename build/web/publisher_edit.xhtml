@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+                
+               
+                 <p:messages id="msg" closable="true" autoUpdate="true"></p:messages>
+                <p:panelGrid columns="2">
+                    
+                    <f:facet name="header">Edit Product</f:facet>
+                    
+                    <p:outputLabel value="id"/>
+                    <p:inputText id="id" value="#{publisherMB.publisher.id}"/>
+                    
+                    <p:outputLabel value="name"/>
+                    <p:inputText id="name" value="#{publisherMB.publisher.username}"/>
+                    
+                    <p:outputLabel value="password"/>
+                    <p:inputText id="password" value="#{publisherMB.publisher.password}"/>
+                    
+                    <p:outputLabel value="email"/>
+                    <p:inputText id="email" value="#{publisherMB.publisher.email}"/>
+                    
+                     <p:outputLabel value="dob"/>
+                     <p:inputText id="dob" value="#{publisherMB.publisher.dob}"/>
+                    
+                     <p:outputLabel value="address"/>
+                     <p:inputText id="address" value="#{publisherMB.publisher.address}"/>
+                    
+                     <p:outputLabel value="mobile"/>
+                     <p:inputText id="mobile" value="#{publisherMB.publisher.mobile}"/>
+                    
+                    
+                    
+                    
+                    <p:outputLabel value=""/>
+                    <p:commandButton value="Update" update="msg" action="#{publisherMB.updatePublisher()}"/>
+                    
+                </p:panelGrid>
+                 <br></br>
+                
+                 <h:link  outcome="publishers_edit" value="Show Table"/>
+            </h:form>
+            
+        </f:view>
+    </h:body>
+</html>
+

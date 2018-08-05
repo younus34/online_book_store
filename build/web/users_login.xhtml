@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="templates/MyTemplate.xhtml">
+        <ui:define name="title">
+            this is online book store
+        </ui:define>
+        <div id="container">
+            <ui:define name="top">
+                <div id="top"></div>
+                <div id="blank"></div>
+                <div id="menu">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
+                                <a class="navbar-brand" href="#">Portfolio</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="index.xhtml">Home</a></li>
+                                    <li><a href="login.xhtml">Admin</a></li>
+                                    <li><a href="users_login.xhtml">User</a></li>
+                                    <li><a href="adduser.xhtml">Registration</a></li>
+
+                                    <li><a href="publisher_Login.xhtml">Publisher</a></li>
+
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+            </ui:define>
+
+            <ui:define name="content">
+
+                <br></br>
+                <br></br>
+                <br></br>
+                <h:form>
+                    <center>
+                    <p:panelGrid columns="2">
+                         <f:facet name="header">User login</f:facet>
+                        <p:outputLabel value="User name"></p:outputLabel>
+                        <p:inputText value="#{u_login.username}"></p:inputText>
+                        <p:outputLabel value="User password"></p:outputLabel>
+                        <h:inputSecret value="#{u_login.password}"></h:inputSecret>
+                        <p:outputLabel value=""/>
+                        <p:commandButton action="#{u_login.checkUser()}" value="submit" ></p:commandButton>
+                    </p:panelGrid>
+                    </center>
+                </h:form>
+
+
+            </ui:define>
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </ui:composition>
+
+
+
+
+</html>
+

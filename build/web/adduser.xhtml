@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="templates/MyTemplate.xhtml">
+        <ui:define name="title">
+            this is online book store
+        </ui:define>
+        <div id="container">
+            <ui:define name="top">
+
+                <div id="blank"></div>
+                <div id="menu">
+                    <nav class="navbar navbar-inverse">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>                        
+                                </button>
+                                <a class="navbar-brand" href="#">Portfolio</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="myNavbar">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a href="index.xhtml">Home</a></li>
+                                    <li><a href="login.xhtml">Admin</a></li>
+                                    <li><a href="users_login.xhtml">User</a></li>
+                                    <li><a href="publisher_Login.xhtml">Publisher</a></li>
+
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+            </ui:define>
+
+            <ui:define name="content" >
+
+
+                <h:form>
+                    <p ><h3 style="color: yellow;">Please give your information before login</h3></p><br/>
+                    <p:messages id="msg" closable="true" autoUpdate="true"></p:messages>
+                    <center>
+                        <p:panelGrid columns="2" >  
+                            <f:facet name="header">User Registration</f:facet>
+                            <h:outputLabel value="username" style="color: orchid;"> </h:outputLabel>
+                            <p:inputText value="#{userMB.user.username}" required="true" requiredMessage="Full Name required"></p:inputText>
+
+                            <h:outputLabel value="password" style="color: orchid;"> </h:outputLabel>
+                            <h:inputSecret value="#{userMB.user.password}" required="true" requiredMessage="password  required"></h:inputSecret>
+
+                            <h:outputLabel value="Email" style="color: orchid;"> </h:outputLabel>
+                            <p:inputText value="#{userMB.user.email}" required="true" requiredMessage="Email  required"></p:inputText>
+
+                            <h:outputLabel value="Date of birth" style="color: orchid;"> </h:outputLabel>
+                            <p:inputText value="#{userMB.user.dob}" required="true" requiredMessage="Date of birth Name required"></p:inputText>
+
+                            <h:outputLabel value="Address" style="color: orchid;"> </h:outputLabel>
+                            <p:inputText value="#{userMB.user.address}" required="true" requiredMessage="Address  required"></p:inputText>
+
+                            <h:outputLabel value="Mobile" style="color: orchid;"> </h:outputLabel>
+                            <p:inputText value="#{userMB.user.mobile}" required="true" requiredMessage="Mobile  required"></p:inputText>
+                            <p:outputLabel value=""/>
+                            <p:commandButton action="#{userMB.addUser()}" value="Save" update="msg"></p:commandButton>
+
+                        </p:panelGrid>  
+
+                    </center>
+
+
+
+                </h:form>
+
+            </ui:define>
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </ui:composition>
+
+
+
+
+</html>
+

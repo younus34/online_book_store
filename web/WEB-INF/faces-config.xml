@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+<!--    <navigation-rule>
+        <from-view-id>login.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{login.checkUser()}</from-action>
+            <from-outcome>true</from-outcome>
+            <to-view-id>Admin_page.xhtml</to-view-id>
+            <redirect></redirect>>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-action>#{login.checkUser()}</from-action>
+            <from-outcome>false</from-outcome>
+            <to-view-id>login.xhtml</to-view-id>
+            <redirect></redirect>>
+        </navigation-case>
+        
+    </navigation-rule>
+    
+    
+    
+    <managed-bean>
+        <managed-bean-name>login</managed-bean-name>
+        <managed-bean-class>addhndler.Login</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        
+    </managed-bean>-->
+    
+<!--     <managed-bean>
+        <managed-bean-name>p_login</managed-bean-name>
+        <managed-bean-class>addhndler.P_login</managed-bean-class>
+        <managed-bean-scope>session</managed-bean-scope>
+        
+    </managed-bean>
+    -->
+    
+    
+    
+</faces-config>
